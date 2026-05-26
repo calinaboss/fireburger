@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIRE – Burgers, Tacos & Shakes</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            title: ['Space Grotesk', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .bg-grid-lines {
+      background: 
+        /* 1. Effetto fumo/luce (SOPRA) */
+        linear-gradient(217deg, rgba(0,0,0,.65), rgba(0,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(185,28,28,.8), rgba(0,0,0,0) 70.71%),
+        linear-gradient(336deg, rgba(0,0,0,.5), rgba(0,0,0,0) 70.71%),
+        /* 2. Griglia spessa e VISIBILE (SOTTO) */
+        linear-gradient(90deg, rgba(56, 1, 1, 0.068) 8px, transparent 8px),
+        linear-gradient(rgba(70, 1, 1, 0.096) 8px, transparent 8px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 100px 100px, 100px 100px;
+      background-color: #b91c1c;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body class="font-body bg-grid-lines text-white antialiased selection:bg-black selection:text-white">
+
+  <header class="relative flex flex-col items-center justify-center pt-12 pb-10 overflow-hidden">
+    <div class="mb-8 transform hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer">
+      <img src="logo.png" alt="Fire Logo" class="h-20 sm:h-24 w-auto mx-auto">
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 w-full text-center relative z-10">
+      <h1 class="font-title text-6xl sm:text-8xl md:text-[9.5rem] font-extrabold text-white leading-[0.95] mb-6 select-none">
+        BORN IN FIRE.<br><span class="text-black">FIRE BURGER & SHAKES.</span>
+      </h1>
+      <p class="text-white text-base sm:text-xl font-medium max-w-xl mx-auto mb-8 leading-relaxed">
+        Smash burger & french tacos artigianali a Bassano del Grappa. Menu 100% Halal.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-xs mx-auto sm:max-w-none">
+        <a href="#ordina" class="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white font-extrabold uppercase text-sm px-10 py-4 rounded-full transition-all duration-200 text-center shadow-md">
+          Ordina Ora
+        </a>
+        <a href="#menu" class="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-black font-extrabold uppercase text-sm px-10 py-4 rounded-full transition-all duration-200 text-center">
+          Scopri il Menu
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="chi-siamo" class="py-12 border-t border-white/10 backdrop-blur-[1px]">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center justify-center gap-2 mb-3">
+      </div>
+      <h2 class="font-title text-3xl sm:text-5xl font-bold text-white mb-6">
+        Il fuoco che ha cambiato Bassano.
+      </h2>
+      <div class="space-y-5 text-white/95 text-sm sm:text-base leading-relaxed text-justify sm:text-center font-medium max-w-2xl mx-auto">
+        <p>FIRE nasce dall’idea di portare qualcosa di nuovo a Bassano del Grappa. Siamo stati i primi a introdurre lo <strong class="text-black font-bold">smash burger</strong> in città e, successivamente, anche i <strong class="text-black font-bold">french tacos</strong>: due prodotti diventati il cuore della nostra identità.</p>
+        <p>Ma non ci siamo limitati a seguirne la tradizione. Li abbiamo reinterpretati a modo nostro, creando un gusto unico, riconoscibile e impossibile da trovare altrove. Ogni ricetta è pensata per unire qualità, carattere e un’esperienza diversa dal solito, con ingredienti freschi e preparazioni fatte al momento.</p>
+        <p>Fire è un concept giovane, moderno e inclusivo con un menu <strong class="text-black font-extrabold">100% HALAL</strong> dove street food e attenzione ai dettagli si incontrano in un ambiente accogliente e contemporaneo. Un posto creato per chi cerca sapori autentici, ma con una personalità tutta nuova.</p>
+      </div>
+    </div>
+  </section>
+
+<section id="menu" class="pt-24 pb-7 border-t border-white/10 overflow-hidden">
+    <div class="max-w-3xl mx-auto px-6 mb-12 flex items-center justify-between">
+      <div>
+        <span class="text-black font-extrabold uppercase text-xs block mb-1">Menu</span>
+        <h2 class="font-title text-4xl sm:text-5xl font-bold text-white">I nostri FIRE BURGERS.</h2>
+      </div>
+      <div class="flex gap-3">
+        <button onclick="scrollSlider(-1, 'slider-burgers')" class="w-11 h-11 rounded-full border border-white bg-transparent hover:bg-white hover:text-red-600 flex items-center justify-center text-white transition-all duration-200" aria-label="Precedente">
+          <i class="fa-solid fa-arrow-left text-xs"></i>
+        </button>
+        <button onclick="scrollSlider(1, 'slider-burgers')" class="w-11 h-11 rounded-full border border-white bg-transparent hover:bg-white hover:text-red-600 flex items-center justify-center text-white transition-all duration-200" aria-label="Successivo">
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="w-full overflow-hidden max-w-4xl mx-auto">
+      <div id="slider-burgers" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar pb-4">
+        
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Triple beef (100% halal)</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4 overflow-visible">
+            <img src="firebeef.png" alt="Fire Classic" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.5)] hover:scale-105 transition-transform duration-300 relative -left-6 md:-left-10">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Panino, tre smash burger, formaggio cheddar, cipolla rossa, jalapenos, lattuga, pomodoro e salsa burger
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">American Double (100% halal)</h3>
+          <div class="w-full max-w-3xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="American.png" alt="Double Smash" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Panino, due smash burger, formaggio cheddar, anelli di cipolla, bacon di tacchino e salsa burger
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">sunny beef (100% halal)</h3>
+          <div class="w-full max-w-3xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="sunny.png" alt="Fire Tacos" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Panino, due smash burger, formaggio cheddar, uovo occhio di bue, cipolla rossa, lattuga, pomodoro e salsa burger
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">BBQ (100% halal)</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="bbq.png" alt="Crispy Chicken" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Panino, due smash burger, bacon di tacchino, formaggio cheddar, cipolla rossa, lattuga e salsa bbq
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">fire beef special (100% halal)</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="firespecial.png" alt="BBQ Bomb" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Panino, due smash burger, formaggio cheddar, cetriolini, cipolla caramellata, jalapenos, lattuga, pomodoro e salsa fire
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Classic beef (100% halal)</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="classic.png" alt="Shake Edition" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Panino, due smash burger, formaggio cheddar, cipolla rossa, lattuga, pomodoro e salsa maionese
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Classic chicken</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="classicchicken.png" alt="Shake Edition" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+           Pane, cotoletta di pollo panata, lattuga, pomodoro e maionese
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Royale chicken</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="royale.png" alt="Shake Edition" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Pane, pollo fritto, formaggio cheddar, anelli di cipolla, insalata iceberg, pomodoro, jalapenos e salsa burger
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Zinger chicken</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="zinger.png" alt="Shake Edition" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Pane, pollo fritto zinger, formaggio cheddar, insalata iceberg, pomodoro, cipolla rossa caramellata e salsa maionese
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Bbq chicken menù (100% halal)</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="bbqchicken.png" alt="Shake Edition" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Pane, pollo fritto, bacon di tacchino, formaggio cheddar, insalata iceberg, cipolla rossa e salsa bbq
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Crispy chicken</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="crispy.png" alt="Shake Edition" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Pane, pollo fritto, formaggio cheddar, insalata iceberg, cipolla rossa, jalapenos, salsa burger
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <section id="tacos" class="pt-8 pb-12 overflow-hidden">
+    <div class="max-w-3xl mx-auto px-6 mb-12 flex items-center justify-between">
+      <div>
+        <span class="text-black font-extrabold uppercase text-xs block mb-1">Menu</span>
+        <h2 class="font-title text-4xl sm:text-5xl font-bold text-white">I nostri FIRE TACOS.</h2>
+      </div>
+      <div class="flex gap-3">
+        <button onclick="scrollSlider(-1, 'slider-tacos')" class="w-11 h-11 rounded-full border border-white bg-transparent hover:bg-white hover:text-red-600 flex items-center justify-center text-white transition-all duration-200" aria-label="Precedente">
+          <i class="fa-solid fa-arrow-left text-xs"></i>
+        </button>
+        <button onclick="scrollSlider(1, 'slider-tacos')" class="w-11 h-11 rounded-full border border-white bg-transparent hover:bg-white hover:text-red-600 flex items-center justify-center text-white transition-all duration-200" aria-label="Successivo">
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="w-full overflow-hidden max-w-4xl mx-auto">
+      <div id="slider-tacos" class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar pb-12">
+        
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Fire French beef (100% halal)</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4 overflow-visible">
+            <img src="tacosbeef.png" alt="Fire Classic" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 relative -left-6 md:-left-10">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Tortilla, macinato di manzo, tre anelli di cipolla, mozzarella, cheddar, patatine e salsa burger
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Fire classic beef (100% halal)</h3>
+          <div class="w-full max-w-3xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="classicbeef.png" alt="Double Smash" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Tortilla, insalata iceberg, pomodoro, cipolla rossa, macinato di manzo, mozzarella, cheddar, patatine e salsa burger
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Fire beef (100% halal)</h3>
+          <div class="w-full max-w-3xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="firetacos.png" alt="Fire Tacos" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Tortilla, insalata iceberg, cipolla caramellata, jalapeños, macinato di manzo, mozzarella, cheddar, patatine e salsa FIRE
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Spicy beef (100% halal)</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="spicy.png" alt="Crispy Chicken" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Insalata iceberg, pomodoro, cipolla rossa, jalapenos, mozzarella, cheddar, patatine e salsa algerina
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">BBQ beff (100% halal)</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="bbqtacos.png" alt="BBQ Bomb" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Tortilla, insalata iceberg, cipolla rossa, macinato di manzo, mozzarella, cheddar, patatine e salsa BBQ.
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Chicken classic</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="chickenclassic.png" alt="Shake Edition" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Tortilla, insalata iceberg, pomodoro, cotoletta di pollo, mozzarella, patatine e salsa rosa.
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Fire chicken</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="firechicken.png" alt="Shake Edition" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Tortilla, insalata iceberg, pomodoro, cipolla caramellata, pollo fritto, mozzarella, cheddar, patatine e salsa fire.
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Spicy Chicken</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="spicychicken.png" alt="Shake Edition" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Tortilla, insalata iceberg, pomodoro, jalapeños, nuggets, mozzarella, cheddar, patatine e salsa algerina.
+          </p>
+        </div>
+
+        <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
+          <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">BBQ Chicken (100% halal)</h3>
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+            <img src="bbqchickentacos.png" alt="Shake Edition" class="max-h-full w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-300 mx-auto">
+          </div>
+          <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed">
+            Tortilla, insalata iceberg, cipolla rossa, pollo fritto, mozzarella, cheddar, patatine e salsa BBQ.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ <section class="py-6 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-black font-extrabold uppercase text-xs block mb-2">I Nostri Punti</span>
+        <h2 class="font-title text-4xl sm:text-5xl font-bold text-white">Dove trovarci</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 sm:gap-16 max-w-4xl mx-auto">
+        
+        <div class="flex flex-col h-full items-center text-center">
+          <div class="text-black text-2xl mb-3"><i class="fa-solid fa-burger"></i></div>
+          <h3 class="font-title text-2xl sm:text-3xl font-bold text-white uppercase min-h-[64px] sm:min-h-[80px] flex items-center justify-center w-full">FIRE BURGERS & SHAKES</h3>
+          <p class="text-white/90 text-base font-medium mt-1 mb-6">Via Roma 92 — Bassano del Grappa</p>
+          
+          <div class="mt-auto w-full overflow-hidden rounded-2xl border-2 border-white/20 shadow-2xl hover:border-black transition-colors duration-300">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.304450678523!2d11.733223312087429!3d45.76508847095984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4778db06d8c1243d%3A0x475b1f8723c9453!2sFire%20-%20Burgers%20%26%20Shakes!5e0!3m2!1sit!2sit!4v1779725631260!5m2!1sit!2sit" class="w-full h-64 sm:h-72" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="flex flex-col h-full items-center text-center">
+          <div class="text-black text-2xl mb-3"><i class="fa-solid fa-utensils"></i></div>
+          <h3 class="font-title text-2xl sm:text-3xl font-bold text-white uppercase min-h-[64px] sm:min-h-[80px] flex items-center justify-center w-full">FIRE FRENCH TACOS & SHAKES</h3>
+          <p class="text-white/90 text-base font-medium mt-1 mb-6">Via Gamba 14 — Bassano del Grappa</p>
+          
+          <div class="mt-auto w-full overflow-hidden rounded-2xl border-2 border-white/20 shadow-2xl hover:border-black transition-colors duration-300">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.1739680915834!2d11.72995821208755!3d45.767703670959946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4778db6e65d4bb7d%3A0xcc5f94334f0befcc!2sFIRE%20-%20French%20Tacos%20%26%20Shakes!5e0!3m2!1sit!2sit!4v1779725658322!5m2!1sit!2sit" class="w-full h-64 sm:h-72" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="ordina" class="py-24 border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-title text-4xl sm:text-5xl font-bold text-white mb-2">Consegna a domicilio.</h2>
+        <p class="text-black font-extrabold text-base sm:text-lg">Ordina direttamente con Deliveroo cliccando qui sotto.</p>
+      </div>
+
+      <div class="flex flex-col gap-6 max-w-md mx-auto">
+        
+        <a href="https://deliveroo.it/menu/mestre/bassano-del-grappa/fire-burgers-and-shakes-via-roma-92?utm_campaign=organic&utm_medium=referrer&utm_source=menu_share" target="_blank" class="relative w-full h-28 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center group transition-transform duration-300 hover:scale-[1.02]">
+          <div class="absolute inset-0 bg-cover bg-center scale-110 transition-transform duration-500 group-hover:scale-[1.35]" style="background-image: url('deliveroo.png');"></div>
+          <div class="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-200"></div>
+          
+          <div class="relative z-10 text-center px-4">
+            <span class="block text-[10px] font-extrabold uppercase text-teal-400 tracking-wider mb-1">Via Roma 92</span>
+            <strong class="font-title text-2xl sm:text-3xl font-bold text-white uppercase tracking-wide">Ordina un Fire Burger</strong>
+          </div>
+        </a>
+
+        <a href="https://deliveroo.it/menu/mestre/bassano-del-grappa/fire-french-tacos-and-shakes?utm_campaign=organic&utm_medium=referrer&utm_source=menu_share" target="_blank" class="relative w-full h-28 rounded-2xl overflow-hidden shadow-xl flex items-center justify-center group transition-transform duration-300 hover:scale-[1.02]">
+          <div class="absolute inset-0 bg-cover bg-center scale-110 transition-transform duration-500 group-hover:scale-[1.35]" style="background-image: url('deliveroo.png');"></div>
+          <div class="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-200"></div>
+          
+          <div class="relative z-10 text-center px-4">
+            <span class="block text-[10px] font-extrabold uppercase text-teal-400 tracking-wider mb-1">Via Gamba 14</span>
+            <strong class="font-title text-2xl sm:text-3xl font-bold text-white uppercase tracking-wide">Ordina un Fire Tacos</strong>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 py-12 text-center">
+    <div class="max-w-4xl mx-auto px-6 space-y-8">
+      
+      <img src="logo.png" alt="Fire Logo" class="h-9 w-auto mx-auto opacity-90">
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-y-4 gap-x-10 text-sm font-bold">
+        <a href="mailto:info@fireburgershakes.com" class="hover:text-black transition-colors inline-flex items-center gap-2">
+          <i class="fa-solid fa-envelope text-black"></i> info@fireburgershakes.com
+        </a>
+        <a href="tel:0424287884" class="hover:text-black transition-colors inline-flex items-center gap-2">
+          <i class="fa-solid fa-phone text-black"></i> Burger: 0424 287884
+        </a>
+        <a href="tel:0424288484" class="hover:text-black transition-colors inline-flex items-center gap-2">
+          <i class="fa-solid fa-phone text-black"></i> Tacos: 0424 288484
+        </a>
+      </div>
+
+      <div class="text-xs text-white/90 font-semibold flex flex-col sm:flex-row items-center justify-center gap-y-2 gap-x-6 pt-1">
+        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-black text-[10px]"></i> Via Roma 92, Bassano del Grappa</span>
+        <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-black text-[10px]"></i> Via Gamba 14, Bassano del Grappa</span>
+      </div>
+
+      <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-black font-extrabold gap-3">
+        <p>© 2026 FIRE Burgers & Shakes tutto 100% Halal</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    function scrollSlider(dir, sliderId) {
+      const slider = document.getElementById(sliderId);
+      const scrollAmount = slider.clientWidth;
+      slider.scrollBy({ left: dir * scrollAmount, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
