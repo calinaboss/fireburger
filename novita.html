@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novità & Promozioni – FIRE</title>
+  <link rel="icon" type="image/png" href="favicon.jpg">
+  <link rel="apple-touch-icon" href="favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            title: ['Space Grotesk', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .bg-grid-lines {
+      background: 
+        linear-gradient(217deg, rgba(0,0,0,.45), rgba(0,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(239, 68, 68, .8), rgba(0,0,0,0) 70.71%),
+        linear-gradient(336deg, rgba(0,0,0,.3), rgba(0,0,0,0) 70.71%),
+        linear-gradient(90deg, rgba(56, 1, 1, 0.05) 8px, transparent 8px),
+        linear-gradient(rgba(70, 1, 1, 0.05) 8px, transparent 8px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 100px 100px, 100px 100px;
+      background-color: #ef4444;
+      background-attachment: fixed;
+    }
+
+    .promo-card {
+      border-radius: 24px;
+      border: 8px solid #ef4444;
+      box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      background-color: #ef4444;
+    }
+
+    .promo-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 45px -5px rgba(0, 0, 0, 0.6);
+    }
+    
+  </style>
+</head>
+<body class="font-body bg-grid-lines text-white antialiased selection:bg-black selection:text-white">
+
+  <button id="menu-btn" class="fixed top-6 left-6 sm:top-8 sm:left-8 z-50 w-12 h-12 flex items-center justify-center rounded-full bg-black/20 hover:bg-black text-white transition-all duration-300 backdrop-blur-sm" aria-label="Apri menu">
+    <i class="fa-solid fa-bars text-xl"></i>
+  </button>
+
+  <div id="side-menu" class="fixed inset-0 bg-black/95 z-40 flex flex-col items-center justify-center transform -translate-x-full transition-transform duration-300">
+    <nav class="flex flex-col gap-8 text-center">
+      <a href="index.html" class="font-title text-5xl font-bold text-white hover:text-red-500 transition-colors uppercase">Home</a>
+      <a href="menu.html" class="font-title text-5xl font-bold text-white hover:text-red-500 transition-colors uppercase">Menu</a>
+      <a href="novita.html" class="font-title text-5xl font-bold text-white hover:text-red-500 transition-colors uppercase">Novità</a>
+    </nav>
+  </div>
+
+  <header class="relative flex flex-col items-center justify-center pt-12 pb-6 overflow-hidden">
+    <a href="index.html" class="mb-4 transform hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer">
+      <img src="logo.png" alt="Fire Logo" class="h-20 sm:h-24 w-auto mx-auto">
+    </a>
+  </header>
+
+  <section class="py-10 max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <span class="text-black font-extrabold uppercase text-xs block mb-2">Fedeltà premia sempre</span>
+      <h1 class="font-title text-4xl sm:text-6xl font-extrabold text-white uppercase tracking-tight">Carta Fedeltà FIRE</h1>
+      <p class="text-white/90 text-sm sm:text-base font-medium max-w-xl mx-auto mt-3">
+        Gusta i tuoi Smash Burger e French Tacos preferiti, colleziona i timbri e ottieni un premio eccezionale!
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
+      <div class="promo-card">
+        <img src="fedelta.jpg" alt="Carta Fedeltà Fronte" class="w-full h-auto object-cover block">
+      </div>
+      <div class="promo-card">
+        <img src="punti.jpg" alt="Carta Fedeltà Retro Punti" class="w-full h-auto object-cover block">
+      </div>
+    </div>
+
+    <div class="text-center mt-12 bg-black/20 backdrop-blur-sm rounded-3xl p-6 max-w-3xl mx-auto border border-white/10">
+      <p class="font-title text-xl sm:text-2xl font-bold uppercase text-white mb-2">Come funziona?</p>
+      <p class="text-sm sm:text-base text-white/95 leading-relaxed max-w-2xl mx-auto font-medium">
+        Richiedi la tua tessera cartacea in uno dei nostri punti vendita a Bassano del Grappa. Ogni 10€ di spesa ricevi 1 timbro. Quando la tessera sarà completa, potrai scegliere il tuo premio: un panino o un tacos a tua scelta completamente gratis!
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 border-t border-white/10 bg-black/20 backdrop-blur-[2px]">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="text-center mb-12">
+        <span class="text-black font-extrabold uppercase text-xs block mb-2">Social Feed</span>
+        <h2 class="font-title text-3xl sm:text-5xl font-bold text-white uppercase">Siamo su Instagram</h2>
+        <a href="https://www.instagram.com/p/DYy8-Upop9H/" target="_blank" class="inline-flex items-center gap-2 text-black font-black mt-2 text-xl sm:text-2xl hover:text-white transition-colors duration-200">
+          @fireburgertacos <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        
+        <a href="https://www.instagram.com/p/DXbWGOkDFHw/" target="_blank" class="group relative aspect-[9/16] rounded-3xl overflow-hidden bg-black border-4 border-white/10 hover:border-black transition-all duration-300 shadow-xl">
+          <img src="video1.png" alt="Anteprima Reel 1" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 flex flex-col justify-end h-32">
+            <span class="font-title font-bold text-lg text-white uppercase tracking-wide">Guarda il Reel</span>
+            <span class="text-xs text-white/70 font-medium">Clicca per aprire su Instagram</span>
+          </div>
+          <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white w-9 h-9 rounded-full flex items-center justify-center text-sm">
+            <i class="fa-solid fa-play"></i>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/p/DXG3CgdDBVq/" target="_blank" class="group relative aspect-[9/16] rounded-3xl overflow-hidden bg-black border-4 border-white/10 hover:border-black transition-all duration-300 shadow-xl">
+          <img src="video2.png" alt="Anteprima Reel 2" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 flex flex-col justify-end h-32">
+            <span class="font-title font-bold text-lg text-white uppercase tracking-wide">Smash Burger Live</span>
+            <span class="text-xs text-white/70 font-medium">Scopri le nostre preparazioni</span>
+          </div>
+          <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white w-9 h-9 rounded-full flex items-center justify-center text-sm">
+            <i class="fa-solid fa-play"></i>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/fireburgertacos/" target="_blank" class="group relative aspect-[9/16] rounded-3xl overflow-hidden bg-black border-4 border-white/10 hover:border-black transition-all duration-300 shadow-xl">
+          <img src="video3.png" alt="Anteprima Reel 3" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 flex flex-col justify-end h-32">
+            <span class="font-title font-bold text-lg text-white uppercase tracking-wide">French Fries Croccanti</span>
+            <span class="text-xs text-white/70 font-medium">Tutto fresco, fatto sul momento</span>
+          </div>
+          <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white w-9 h-9 rounded-full flex items-center justify-center text-sm">
+            <i class="fa-solid fa-play"></i>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="flex justify-center mt-12">
+        <a href="https://www.instagram.com/fireburgertacos/" target="_blank" class="bg-white text-black hover:bg-black hover:text-white font-extrabold uppercase text-sm px-12 py-4 rounded-full transition-all duration-200 text-center shadow-lg inline-flex items-center gap-2">
+          <i class="fa-brands fa-instagram text-base"></i> Seguici su Instagram!
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 py-12 text-center">
+    <div class="max-w-4xl mx-auto px-6 space-y-6">
+      <img src="logo.png" alt="Fire Logo" class="h-9 w-auto mx-auto opacity-90">
+      <p class="text-xs text-white/80 font-semibold uppercase tracking-wider">© 2026 FIRE Burgers & Shakes tutto 100% Halal</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sideMenu = document.getElementById('side-menu');
+    const icon = menuBtn.querySelector('i');
+
+    function toggleMenu() {
+      sideMenu.classList.toggle('-translate-x-full');
+      if (sideMenu.classList.contains('-translate-x-full')) {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      } else {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      }
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+  </script>
+
+  <div id="page-transition"></div>
+
+
+
+
+
+</body>
+</html>
