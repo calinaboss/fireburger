@@ -18,6 +18,11 @@
           fontFamily: {
             title: ['Space Grotesk', 'sans-serif'],
             body: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            red: {
+              500: '#ff0000'
+            }
           }
         }
       }
@@ -30,22 +35,22 @@
     .bg-grid-lines {
       background: 
         linear-gradient(217deg, rgba(0,0,0,.45), rgba(0,0,0,0) 70.71%),
-        linear-gradient(127deg, rgba(239, 68, 68, .8), rgba(0,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(255, 0, 0, .8), rgba(0,0,0,0) 70.71%),
         linear-gradient(336deg, rgba(0,0,0,.3), rgba(0,0,0,0) 70.71%),
         linear-gradient(90deg, rgba(56, 1, 1, 0.05) 8px, transparent 8px),
         linear-gradient(rgba(70, 1, 1, 0.05) 8px, transparent 8px);
       background-size: 100% 100%, 100% 100%, 100% 100%, 100px 100px, 100px 100px;
-      background-color: #ef4444;
+      background-color: #ff0000;
       background-attachment: fixed;
     }
 
     .promo-card {
       border-radius: 24px;
-      border: 8px solid #ef4444;
+      border: 8px solid #ff0000;
       box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.4);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       overflow: hidden;
-      background-color: #ef4444;
+      background-color: #ff0000;
     }
 
     .promo-card:hover {
@@ -96,7 +101,10 @@
     <div class="text-center mt-12 bg-black/20 backdrop-blur-sm rounded-3xl p-6 max-w-3xl mx-auto border border-white/10">
       <p class="font-title text-xl sm:text-2xl font-bold uppercase text-white mb-2">Come funziona?</p>
       <p class="text-sm sm:text-base text-white/95 leading-relaxed max-w-2xl mx-auto font-medium">
-        Richiedi la tua tessera cartacea in uno dei nostri punti vendita a Bassano del Grappa. Ogni 10€ di spesa ricevi 1 timbro. Quando la tessera sarà completa, potrai scegliere il tuo premio: un panino o un tacos a tua scelta completamente gratis!
+        Da oggi puoi ritirare nei nostri store la nuova FIRE CARD: ogni 10€ di spesa ricevi 1 timbro.
+Raggiunti 10 timbri, potrai riscattare un panino oppure un taco a scelta.
+
+Cosa aspetti? Completa la tessera e scegli il tuo premio!!!
       </p>
     </div>
   </section>
@@ -128,8 +136,8 @@
         <a href="https://www.instagram.com/p/DXG3CgdDBVq/" target="_blank" class="group relative aspect-[9/16] rounded-3xl overflow-hidden bg-black border-4 border-white/10 hover:border-black transition-all duration-300 shadow-xl">
           <img src="video2.png" alt="Anteprima Reel 2" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300">
           <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 flex flex-col justify-end h-32">
-            <span class="font-title font-bold text-lg text-white uppercase tracking-wide">Smash Burger Live</span>
-            <span class="text-xs text-white/70 font-medium">Scopri le nostre preparazioni</span>
+            <span class="font-title font-bold text-lg text-white uppercase tracking-wide">Offerta studenti!</span>
+            <span class="text-xs text-white/70 font-medium">Clicca per aprire su Instagram</span>
           </div>
           <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white w-9 h-9 rounded-full flex items-center justify-center text-sm">
             <i class="fa-solid fa-play"></i>
@@ -139,8 +147,8 @@
         <a href="https://www.instagram.com/fireburgertacos/" target="_blank" class="group relative aspect-[9/16] rounded-3xl overflow-hidden bg-black border-4 border-white/10 hover:border-black transition-all duration-300 shadow-xl">
           <img src="video3.png" alt="Anteprima Reel 3" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300">
           <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 flex flex-col justify-end h-32">
-            <span class="font-title font-bold text-lg text-white uppercase tracking-wide">French Fries Croccanti</span>
-            <span class="text-xs text-white/70 font-medium">Tutto fresco, fatto sul momento</span>
+            <span class="font-title font-bold text-lg text-white uppercase tracking-wide">I nostri burgers</span>
+            <span class="text-xs text-white/70 font-medium">clicca per aprire su instagram</span>
           </div>
           <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white w-9 h-9 rounded-full flex items-center justify-center text-sm">
             <i class="fa-solid fa-play"></i>
@@ -185,10 +193,6 @@
   </script>
 
   <div id="page-transition"></div>
-
-
-
-
 
 </body>
 </html>

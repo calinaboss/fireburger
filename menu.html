@@ -19,6 +19,12 @@
           fontFamily: {
             title: ['Space Grotesk', 'sans-serif'],
             body: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            red: {
+              500: '#ff0000',
+              600: '#e60000'
+            }
           }
         }
       }
@@ -32,12 +38,12 @@
     .bg-grid-lines {
       background: 
         linear-gradient(217deg, rgba(0,0,0,.65), rgba(0,0,0,0) 70.71%),
-        linear-gradient(127deg, rgba(239, 68, 68, .9), rgba(0,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(255, 0, 0, .9), rgba(0,0,0,0) 70.71%),
         linear-gradient(336deg, rgba(0,0,0,.5), rgba(0,0,0,0) 70.71%),
         linear-gradient(90deg, rgba(56, 1, 1, 0.08) 8px, transparent 8px),
         linear-gradient(rgba(70, 1, 1, 0.1) 8px, transparent 8px);
       background-size: 100% 100%, 100% 100%, 100% 100%, 100px 100px, 100px 100px;
-      background-color: #ef4444;
+      background-color: #ff0000;
       background-attachment: fixed;
     }
 
@@ -106,7 +112,10 @@
         
         <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
           <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Triple beef</h3>
-          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4 overflow-visible">
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4 overflow-visible relative">
+            <div class="absolute top-0 right-4 sm:right-12 z-20 bg-yellow-400 text-black text-xs sm:text-sm font-extrabold px-4 py-2 rounded-3xl rounded-bl-none shadow-xl transform rotate-6 border-2 border-black flex items-center gap-1">
+              <i class="fa-solid fa-star text-red-600"></i> TOP SELLER
+            </div>
             <img src="firebeef.png" alt="Triple Beef" class="max-h-full w-auto drop-shadow-[0_20px_25px_rgba(0,0,0,0.6)] hover:scale-110 transition-transform duration-500 relative -left-6 md:-left-10 cursor-grab active:cursor-grabbing">
           </div>
           <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed bg-black/20 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
@@ -126,7 +135,10 @@
 
         <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
           <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Sunny beef</h3>
-          <div class="w-full max-w-3xl h-64 sm:h-80 flex items-center justify-center mb-4">
+          <div class="w-full max-w-3xl h-64 sm:h-80 flex items-center justify-center mb-4 relative">
+            <div class="absolute top-0 right-4 sm:right-12 z-20 bg-yellow-400 text-black text-xs sm:text-sm font-extrabold px-4 py-2 rounded-3xl rounded-bl-none shadow-xl transform rotate-6 border-2 border-black flex items-center gap-1">
+              <i class="fa-solid fa-star text-red-600"></i> TOP SELLER
+            </div>
             <img src="sunny.png" alt="Sunny Beef" class="max-h-full w-auto drop-shadow-[0_20px_25px_rgba(0,0,0,0.6)] hover:scale-110 transition-transform duration-500 mx-auto cursor-grab active:cursor-grabbing">
           </div>
           <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed bg-black/20 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
@@ -206,7 +218,10 @@
 
         <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
           <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Crispy chicken</h3>
-          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4 relative">
+            <div class="absolute top-0 right-4 sm:right-12 z-20 bg-yellow-400 text-black text-xs sm:text-sm font-extrabold px-4 py-2 rounded-3xl rounded-bl-none shadow-xl transform rotate-6 border-2 border-black flex items-center gap-1">
+              <i class="fa-solid fa-star text-red-600"></i> TOP SELLER
+            </div>
             <img src="crispy.png" alt="Crispy Chicken" class="max-h-full w-auto drop-shadow-[0_20px_25px_rgba(0,0,0,0.6)] hover:scale-110 transition-transform duration-500 mx-auto cursor-grab active:cursor-grabbing">
           </div>
           <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed bg-black/20 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
@@ -239,7 +254,10 @@
         
         <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
           <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Fire French beef</h3>
-          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4 overflow-visible">
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4 overflow-visible relative">
+            <div class="absolute top-0 right-4 sm:right-12 z-20 bg-yellow-400 text-black text-xs sm:text-sm font-extrabold px-4 py-2 rounded-3xl rounded-bl-none shadow-xl transform rotate-6 border-2 border-black flex items-center gap-1">
+              <i class="fa-solid fa-star text-red-600"></i> TOP SELLER
+            </div>
             <img src="tacosbeef.png" alt="Fire French Beef" class="max-h-full w-auto drop-shadow-[0_20px_25px_rgba(0,0,0,0.6)] hover:scale-110 transition-transform duration-500 relative -left-6 md:-left-10 cursor-grab active:cursor-grabbing">
           </div>
           <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed bg-black/20 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
@@ -289,7 +307,10 @@
 
         <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
           <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Chicken classic</h3>
-          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4 relative">
+            <div class="absolute top-0 right-4 sm:right-12 z-20 bg-yellow-400 text-black text-xs sm:text-sm font-extrabold px-4 py-2 rounded-3xl rounded-bl-none shadow-xl transform rotate-6 border-2 border-black flex items-center gap-1">
+              <i class="fa-solid fa-star text-red-600"></i> TOP SELLER
+            </div>
             <img src="chickenclassic.png" alt="Chicken Classic" class="max-h-full w-auto drop-shadow-[0_20px_25px_rgba(0,0,0,0.6)] hover:scale-110 transition-transform duration-500 mx-auto cursor-grab active:cursor-grabbing">
           </div>
           <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed bg-black/20 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
@@ -309,7 +330,10 @@
 
         <div class="min-w-full snap-center flex flex-col items-center justify-start text-center px-6">
           <h3 class="font-title font-bold text-3xl sm:text-4xl uppercase mb-4 text-black min-h-[64px] sm:min-h-[80px] flex items-center justify-center">Spicy Chicken</h3>
-          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4">
+          <div class="w-full max-w-2xl h-64 sm:h-80 flex items-center justify-center mb-4 relative">
+            <div class="absolute top-0 right-4 sm:right-12 z-20 bg-yellow-400 text-black text-xs sm:text-sm font-extrabold px-4 py-2 rounded-3xl rounded-bl-none shadow-xl transform rotate-6 border-2 border-black flex items-center gap-1">
+              <i class="fa-solid fa-star text-red-600"></i> TOP SELLER
+            </div>
             <img src="spicychicken.png" alt="Spicy Chicken" class="max-h-full w-auto drop-shadow-[0_20px_25px_rgba(0,0,0,0.6)] hover:scale-110 transition-transform duration-500 mx-auto cursor-grab active:cursor-grabbing">
           </div>
           <p class="text-white max-w-md text-sm sm:text-base font-medium leading-relaxed bg-black/20 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
@@ -520,9 +544,6 @@
   </script>
 
   <div id="page-transition"></div>
-
-
-
 
 </body>
 </html>

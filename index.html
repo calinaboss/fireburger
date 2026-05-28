@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FIRE – Burgers, Tacos & Shakes</title>
   <link rel="icon" type="image/png" href="favicon.jpg">
-  
   <link rel="apple-touch-icon" href="favicon.jpg">
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
@@ -16,22 +14,18 @@
   <meta name="keywords" content="fire burger bassano, smash burger bassano del grappa, french tacos bassano, halal bassano del grappa, fast food bassano, hamburgeria bassano, deliveroo bassano del grappa">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fireburger.onrender.com/">
-
   <meta name="geo.region" content="IT-VI">
   <meta name="geo.placename" content="Bassano del Grappa">
   <meta name="geo.position" content="45.7661;11.7342">
   <meta name="ICBM" content="45.7661, 11.7342">
-
   <meta property="og:type" content="restaurant">
   <meta property="og:title" content="FIRE – Burgers, Tacos & Shakes a Bassano">
   <meta property="og:description" content="Smash Burger succulenti e French Tacos originali. Menu 100% Halal a Bassano del Grappa. Ordina ora!">
   <meta property="og:url" content="https://fireburger.onrender.com/">
   <meta property="og:site_name" content="FIRE Burgers & Tacos">
-
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="FIRE – Burgers, Tacos & Shakes a Bassano">
   <meta name="twitter:description" content="Smash Burger e French Tacos 100% Halal a Bassano del Grappa. Ordina direttamente online.">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -78,7 +72,6 @@
   }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -87,58 +80,64 @@
           fontFamily: {
             title: ['Space Grotesk', 'sans-serif'],
             body: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            red: {
+              500: '#ff0000'
+            }
           }
         }
       }
     }
   </script>
-<style>
+  <style>
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
     .bg-grid-lines {
       background: 
         linear-gradient(217deg, rgba(0,0,0,.45), rgba(0,0,0,0) 70.71%),
-        linear-gradient(127deg, rgba(239, 68, 68, .8), rgba(0,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(255, 0, 0, .85), rgba(0,0,0,0) 70.71%),
         linear-gradient(336deg, rgba(0,0,0,.3), rgba(0,0,0,0) 70.71%),
         linear-gradient(90deg, rgba(56, 1, 1, 0.05) 8px, transparent 8px),
         linear-gradient(rgba(70, 1, 1, 0.05) 8px, transparent 8px);
       background-size: 100% 100%, 100% 100%, 100% 100%, 100px 100px, 100px 100px;
-      background-color: #ef4444;
-      background-attachment: fixed;
+      background-color: #ff0000;
+    }
+
+    @media (min-width: 1024px) {
+      .bg-grid-lines {
+        background-attachment: fixed;
+      }
     }
 
     .map-card {
       border-radius: 50%;
-      border: 10px solid #ef4444;
-      box-shadow: 0 10px 30px -5px rgba(239, 68, 68, 0.6);
+      border: 10px solid #ff0000;
+      box-shadow: 0 10px 30px -5px rgba(255, 0, 0, 0.6);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       width: 100%;
       max-width: 360px;
       aspect-ratio: 1 / 1;
       margin: 0 auto;
       overflow: hidden;
-      background-color: #ef4444;
+      background-color: #ff0000;
+      isolation: isolate;
+      -webkit-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
     }
 
     .map-card:hover {
       transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 15px 40px -5px rgba(239, 68, 68, 0.9);
+      box-shadow: 0 15px 40px -5px rgba(255, 0, 0, 0.9);
     }
 
     .map-frame {
       width: 100%;
       height: 100%;
       border: 0;
-      filter: grayscale(80%) contrast(110%);
-      transition: filter 0.4s ease;
-    }
-
-    .map-card:hover .map-frame {
-      filter: grayscale(0%) contrast(100%);
     }
   </style>
-  
 </head>
 <body class="font-body bg-grid-lines text-white antialiased selection:bg-black selection:text-white">
 
@@ -159,11 +158,11 @@
       <img src="logo.png" alt="Fire Logo" class="h-20 sm:h-24 w-auto mx-auto">
     </div>
 
-    <div class="max-w-6xl mx-auto px-6 w-full text-center relative z-10">
-      <h1 class="font-title text-6xl sm:text-8xl md:text-[9.5rem] font-extrabold text-white leading-[0.95] mb-6 select-none">
-        GUSTOSO, FRESCO, UNICO.<br><span class="text-black">FIRE BURGER & SHAKES.</span>
+    <div class="max-w-6xl mx-auto px-4 w-full text-center relative z-10">
+      <h1 class="font-title text-[7.2vw] sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-tight mb-6 select-none tracking-tight whitespace-nowrap text-center">
+        GUSTOSO, FRESCO, UNICO.
       </h1>
-      <p class="text-white text-base sm:text-xl font-medium max-w-xl mx-auto mb-8 leading-relaxed">
+      <p class="text-white text-lg sm:text-2xl font-semibold max-w-2xl mx-auto mb-8 leading-relaxed px-2">
         Da FIRE tutto a vista, fatto a modo nostro!
       </p>
       <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-xs mx-auto sm:max-w-none">
@@ -185,14 +184,14 @@
         Chi siamo
       </h2>
       <div class="space-y-5 text-white/95 text-sm sm:text-base leading-relaxed text-justify sm:text-center font-medium max-w-2xl mx-auto">
-        <p>FIRE nasce dall’idea di portare qualcosa di nuovo a Bassano del Grappa. Siamo stati i primi a introdurre lo <strong class="text-black font-bold">smash burger</strong> in città e, successivamente, anche i <strong class="text-black font-bold">french tacos</strong>: due prodotti diventati il cuore della nostra identità.</p>
-        <p>Ma non ci siamo limitati a seguirne la tradizione. Li abbiamo reinterpretati a modo nostro, creando un gusto unico, riconoscibile e impossibile da trovare altrove. Ogni ricetta è pensata per unire qualità, carattere e un’esperienza diversa dal solito, con ingredienti frescos e preparazioni fatte al momento.</p>
+        <p>FIRE nasce dall’idea di portare qualcosa di nuovo a Bassano del Grappa. Siamo stati i primi a introdurre lo <strong class="text-black font-bold">smash burger</strong> in città e, successivamente, anche i <strong class="text-black font-bold">french tacos</strong>: due prodotti diventati il cuore della nostra identity.</p>
+        <p>Ma non ci siamo limitati a seguirne la traditione. Li abbiamo reinterpretati a modo nostro, creando un gusto unico, riconoscibile e impossibile da trovare altrove. Ogni ricetta è pensata per unire qualità, carattere e un’esperienza diversa dal solito, con ingredienti freschi e preparazioni fatte al momento.</p>
         <p>Fire è un concept giovane, moderno e inclusivo con un menu <strong class="text-black font-extrabold">100% HALAL</strong> dove street food e attenzione ai dettagli si incontrano in un ambiente accogliente e contemporaneo. Un posto creato per chi cerca sapori autentici, ma con una personalità tutta nuova.</p>
       </div>
     </div>
   </section>
 
- <section class="py-16 border-t border-white/10">
+  <section class="py-16 border-t border-white/10">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <span class="text-black font-extrabold uppercase text-xs block mb-2">I Nostri Punti</span>
@@ -258,7 +257,7 @@
     </div>
   </section>
 
-  <footer id="contatti" class="border-t border-white/10 py-12 text-center">
+  <section id="contatti" class="py-12 border-t border-white/10 text-center">
     <div class="max-w-4xl mx-auto px-6 space-y-8">
       
       <img src="logo.png" alt="Fire Logo" class="h-9 w-auto mx-auto opacity-90">
@@ -291,7 +290,7 @@
       </div>
 
     </div>
-  </footer>
+  </section>
 
   <script>
     const menuBtn = document.getElementById('menu-btn');
@@ -314,10 +313,6 @@
   </script>
 
   <div id="page-transition"></div>
-
-
-
-
 
 </body>
 </html>
