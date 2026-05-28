@@ -95,32 +95,28 @@
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
     .bg-grid-lines {
-  background:
-    radial-gradient(circle at top,
-      rgba(255,20,20,0.95) 0%,
-      rgba(255,20,20,0.95) 35%,
-      rgba(255,0,0,0.92) 60%,
-      rgba(220,0,0,1) 100%
-    ),
-
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,0.03) 8px,
-      transparent 8px
-    ),
-
-    linear-gradient(
-      rgba(255,255,255,0.03) 8px,
-      transparent 8px
-    );
-
-  background-size:
-    100% 100%,
-    100px 100px,
-    100px 100px;
-
-  background-color: #ff1a1a;
-}
+      background:
+        radial-gradient(circle at top,
+          rgba(255,20,20,0.95) 0%,
+          rgba(255,20,20,0.95) 35%,
+          rgba(255,0,0,0.92) 60%,
+          rgba(220,0,0,1) 100%
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.03) 8px,
+          transparent 8px
+        ),
+        linear-gradient(
+          rgba(255,255,255,0.03) 8px,
+          transparent 8px
+        );
+      background-size:
+        100% 100%,
+        100px 100px,
+        100px 100px;
+      background-color: #ff1a1a;
+    }
 
     @media (min-width: 1024px) {
       .bg-grid-lines {
@@ -170,39 +166,47 @@
     </nav>
   </div>
 
-  <header class="relative flex flex-col items-center justify-center pt-12 pb-10 overflow-hidden">
-    <div class="mb-8 transform hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer">
-      <img src="logo.png" alt="Fire Logo" class="h-20 sm:h-24 w-auto mx-auto">
+  <header class="relative min-h-[90vh] flex flex-col items-center justify-center pt-12 pb-20 overflow-hidden">
+    
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-[url('sfondo.png')] bg-cover bg-center bg-no-repeat"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-red-900/40 to-[#ff1a1a]"></div>
     </div>
 
-    <div class="max-w-6xl mx-auto px-4 w-full text-center relative z-10">
-      <h1 class="font-title text-[7.2vw] sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-tight mb-6 select-none tracking-tight whitespace-nowrap text-center">
+    <div class="relative z-10 max-w-6xl mx-auto px-4 w-full text-center flex flex-col items-center">
+      
+      <div class="mb-10 transform hover:scale-105 active:scale-95 transition-transform duration-300 cursor-pointer drop-shadow-2xl">
+        <img src="logo.png" alt="Fire Logo" class="h-28 sm:h-36 md:h-40 w-auto mx-auto">
+      </div>
+
+      <h1 class="font-title text-[7vw] sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white leading-tight mb-4 select-none tracking-tight whitespace-nowrap drop-shadow-lg">
         GUSTOSO, FRESCO, UNICO.
       </h1>
-      <p class="text-white text-lg sm:text-2xl font-semibold max-w-2xl mx-auto mb-8 leading-relaxed px-2">
+      
+      <p class="text-white text-xl sm:text-2xl md:text-3xl font-semibold max-w-2xl mx-auto mb-12 leading-relaxed px-2 drop-shadow-md">
         Da FIRE tutto a vista, fatto a modo nostro!
       </p>
-      <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-xs mx-auto sm:max-w-none">
-        <a href="#ordina" class="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white font-extrabold uppercase text-sm px-10 py-4 rounded-full transition-all duration-200 text-center shadow-md">
+      
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-5 w-full max-w-xs mx-auto sm:max-w-none">
+        <a href="#ordina" class="w-full sm:w-auto bg-white text-black hover:bg-black hover:text-white font-extrabold uppercase text-sm px-10 py-4 rounded-full transition-all duration-200 text-center shadow-xl">
           Ordina Ora
         </a>
-        <a href="menu.html" class="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-black font-extrabold uppercase text-sm px-10 py-4 rounded-full transition-all duration-200 text-center">
+        <a href="menu.html" class="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-black font-extrabold uppercase text-sm px-10 py-4 rounded-full transition-all duration-200 text-center backdrop-blur-sm shadow-xl">
           Scopri il Menu
         </a>
       </div>
+
     </div>
   </header>
 
-  <section id="chi-siamo" class="py-12 border-t border-white/10 backdrop-blur-[1px]">
+  <section id="chi-siamo" class="py-16 relative z-10 border-t border-white/10 backdrop-blur-[1px]">
     <div class="max-w-3xl mx-auto px-6 text-center">
-      <div class="inline-flex items-center justify-center gap-2 mb-3">
-      </div>
-      <h2 class="font-title text-3xl sm:text-5xl font-bold text-white mb-6">
+      <h2 class="font-title text-3xl sm:text-5xl font-bold text-white mb-8">
         Chi siamo
       </h2>
-      <div class="space-y-5 text-white/95 text-sm sm:text-base leading-relaxed text-justify sm:text-center font-medium max-w-2xl mx-auto">
+      <div class="space-y-6 text-white/95 text-base sm:text-lg leading-relaxed text-justify sm:text-center font-medium max-w-2xl mx-auto">
         <p>FIRE nasce dall’idea di portare qualcosa di nuovo a Bassano del Grappa. Siamo stati i primi a introdurre lo <strong class="text-black font-bold">smash burger</strong> in città e, successivamente, anche i <strong class="text-black font-bold">french tacos</strong>: due prodotti diventati il cuore della nostra identity.</p>
-        <p>Ma non ci siamo limitati a seguirne la traditione. Li abbiamo reinterpretati a modo nostro, creando un gusto unico, riconoscibile e impossibile da trovare altrove. Ogni ricetta è pensata per unire qualità, carattere e un’esperienza diversa dal solito, con ingredienti freschi e preparazioni fatte al momento.</p>
+        <p>Ma non ci siamo limitati a seguirne la tradizione. Li abbiamo reinterpretati a modo nostro, creando un gusto unico, riconoscibile e impossibile da trovare altrove. Ogni ricetta è pensata per unire qualità, carattere e un’esperienza diversa dal solito, con ingredienti freschi e preparazioni fatte al momento.</p>
         <p>Fire è un concept giovane, moderno e inclusivo con un menu <strong class="text-black font-extrabold">100% HALAL</strong> dove street food e attenzione ai dettagli si incontrano in un ambiente accogliente e contemporaneo. Un posto creato per chi cerca sapori autentici, ma con una personalità tutta nuova.</p>
       </div>
     </div>
@@ -274,39 +278,39 @@
     </div>
   </section>
 
-  <section id="contatti" class="py-12 border-t border-white/10 text-center">
+  <h2 class="font-title text-4xl sm:text-5xl font-bold text-white mb-2 text-center mt-12">CHI SIAMO/DOVE TROVARCI/CONTATTI</h2>
+
+  <section id="contatti" class="py-8 border-t border-white/10 text-center">
     <div class="max-w-4xl mx-auto px-6 space-y-8">
       <div class="flex justify-center pt-2">
-        <a href="https://www.instagram.com/" target="_blank" class="inline-flex items-center gap-2 bg-white text-black hover:bg-black hover:text-white font-extrabold uppercase text-xs px-6 py-3 rounded-full transition-all duration-200 shadow-md">
-          <i class="fa-brands fa-instagram text-base"></i> Seguici su Instagram!
+        <a href="https://www.instagram.com/" target="_blank" class="inline-flex items-center gap-3 bg-white text-black hover:bg-black hover:text-white font-extrabold uppercase text-base px-12 py-5 rounded-full transition-all duration-200 shadow-md">
+          <i class="fa-brands fa-instagram text-2xl"></i> Seguici su Instagram!
         </a>
       </div>
       
       <img src="logo.png" alt="Fire Logo" class="h-9 w-auto mx-auto opacity-90">
       
-      <h2 class="font-title text-4xl sm:text-5xl font-bold text-white mb-2 underline">Contatti </h2>
+      <h2 class="font-title text-4xl sm:text-5xl font-bold text-white mb-2 underline">Contatti</h2>
       
       <div class="flex flex-col sm:flex-row items-center justify-center gap-y-4 gap-x-10 text-sm font-bold">
         <a href="mailto:info@fireburgershakes.com" class="hover:text-black transition-colors inline-flex items-center gap-2">
           <i class="fa-solid fa-envelope text-black"></i> info@fireburgershakes.com
         </a>
         <a href="tel:0424287884" class="hover:text-black transition-colors inline-flex items-center gap-2">
-  <div class="text-black text-2xl mb-3">
-    <img src="iconaburger.png" class="h-9 w-auto mx-auto opacity-90 translate-y-1">
-  </div>
-
-  <span class="-translate-x-2">
-    Burger: 0424 287884
-  </span>
-</a>
-        <a href="tel:0424288484" class="hover:text-black transition-colors inline-flex items-center gap-2  ">
-          <div class="text-black text-2xl mb-3"> <img src="iconatacos.png" class="h-9 w-auto mx-auto opacity-90 translate-y-2" > </div> Tacos: 0424 288484
+          <div class="text-black text-2xl mb-3">
+            <img src="iconaburger.png" class="h-9 w-auto mx-auto opacity-90 translate-y-1">
+          </div>
+          <span class="-translate-x-2">
+            Burger: 0424 287884
+          </span>
+        </a>
+        <a href="tel:0424288484" class="hover:text-black transition-colors inline-flex items-center gap-2">
+          <div class="text-black text-2xl mb-3"> 
+            <img src="iconatacos.png" class="h-9 w-auto mx-auto opacity-90 translate-y-2"> 
+          </div> 
+          Tacos: 0424 288484
         </a>
       </div>
-
-     
-
-    
 
       <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-black font-extrabold gap-3">
         <p>© 2026 FIRE Burgers & Shakes tutto 100% Halal</p>
