@@ -95,15 +95,32 @@
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
     .bg-grid-lines {
-      background: 
-        linear-gradient(217deg, rgba(0,0,0,.45), rgba(0,0,0,0) 70.71%),
-        linear-gradient(127deg, rgba(255, 0, 0, .85), rgba(0,0,0,0) 70.71%),
-        linear-gradient(336deg, rgba(0,0,0,.3), rgba(0,0,0,0) 70.71%),
-        linear-gradient(90deg, rgba(56, 1, 1, 0.05) 8px, transparent 8px),
-        linear-gradient(rgba(70, 1, 1, 0.05) 8px, transparent 8px);
-      background-size: 100% 100%, 100% 100%, 100% 100%, 100px 100px, 100px 100px;
-      background-color: #ff0000;
-    }
+  background:
+    radial-gradient(circle at top,
+      rgba(255,80,80,0.95) 0%,
+      rgba(255,20,20,0.95) 35%,
+      rgba(255,0,0,0.92) 60%,
+      rgba(220,0,0,1) 100%
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.03) 8px,
+      transparent 8px
+    ),
+
+    linear-gradient(
+      rgba(255,255,255,0.03) 8px,
+      transparent 8px
+    );
+
+  background-size:
+    100% 100%,
+    100px 100px,
+    100px 100px;
+
+  background-color: #ff1a1a;
+}
 
     @media (min-width: 1024px) {
       .bg-grid-lines {
