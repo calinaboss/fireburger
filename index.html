@@ -97,7 +97,7 @@
     .bg-grid-lines {
   background:
     radial-gradient(circle at top,
-      rgba(255,80,80,0.95) 0%,
+      rgba(255,20,20,0.95) 0%,
       rgba(255,20,20,0.95) 35%,
       rgba(255,0,0,0.92) 60%,
       rgba(220,0,0,1) 100%
@@ -219,7 +219,7 @@
         
         <div class="flex flex-col h-full items-center text-center">
           <h3 class="font-title text-2xl sm:text-3xl font-bold text-white uppercase min-h-[64px] sm:min-h-[80px] flex items-center justify-center w-full">FIRE BURGERS & SHAKES</h3>
-          <div class="text-black text-2xl mb-3"><i class="fa-solid fa-burger"></i></div>
+          <div class="text-black text-2xl mb-3"> <img src="iconaburger.png" class="h-9 w-auto mx-auto opacity-90" > </div>
           <p class="text-white/90 text-base font-medium mt-1 mb-6">Via Roma 92 — Bassano del Grappa</p>
           
           <div class="mt-auto map-card">
@@ -229,7 +229,7 @@
 
         <div class="flex flex-col h-full items-center text-center">
           <h3 class="font-title text-2xl sm:text-3xl font-bold text-white uppercase min-h-[64px] sm:min-h-[80px] flex items-center justify-center w-full">FIRE FRENCH TACOS & SHAKES</h3>
-          <div class="text-black text-2xl mb-3"><i class="fa-solid fa-utensils"></i></div>
+          <div class="text-black text-2xl mb-3"> <img src="iconatacos.png" class="h-9 w-auto mx-auto opacity-90" > </div>
           <p class="text-white/90 text-base font-medium mt-1 mb-6">Via Gamba 14 — Bassano del Grappa</p>
           
           <div class="mt-auto map-card">
@@ -276,26 +276,35 @@
 
   <section id="contatti" class="py-12 border-t border-white/10 text-center">
     <div class="max-w-4xl mx-auto px-6 space-y-8">
+      <div class="flex justify-center pt-2">
+        <a href="https://www.instagram.com/" target="_blank" class="inline-flex items-center gap-2 bg-white text-black hover:bg-black hover:text-white font-extrabold uppercase text-xs px-6 py-3 rounded-full transition-all duration-200 shadow-md">
+          <i class="fa-brands fa-instagram text-base"></i> Seguici su Instagram!
+        </a>
+      </div>
       
       <img src="logo.png" alt="Fire Logo" class="h-9 w-auto mx-auto opacity-90">
+      
+      <h2 class="font-title text-4xl sm:text-5xl font-bold text-white mb-2 underline">Contatti </h2>
       
       <div class="flex flex-col sm:flex-row items-center justify-center gap-y-4 gap-x-10 text-sm font-bold">
         <a href="mailto:info@fireburgershakes.com" class="hover:text-black transition-colors inline-flex items-center gap-2">
           <i class="fa-solid fa-envelope text-black"></i> info@fireburgershakes.com
         </a>
         <a href="tel:0424287884" class="hover:text-black transition-colors inline-flex items-center gap-2">
-          <i class="fa-solid fa-phone text-black"></i> Burger: 0424 287884
-        </a>
-        <a href="tel:0424288484" class="hover:text-black transition-colors inline-flex items-center gap-2">
-          <i class="fa-solid fa-phone text-black"></i> Tacos: 0424 288484
+  <div class="text-black text-2xl mb-3">
+    <img src="iconaburger.png" class="h-9 w-auto mx-auto opacity-90 translate-y-1">
+  </div>
+
+  <span class="-translate-x-2">
+    Burger: 0424 287884
+  </span>
+</a>
+        <a href="tel:0424288484" class="hover:text-black transition-colors inline-flex items-center gap-2  ">
+          <div class="text-black text-2xl mb-3"> <img src="iconatacos.png" class="h-9 w-auto mx-auto opacity-90 translate-y-2" > </div> Tacos: 0424 288484
         </a>
       </div>
 
-      <div class="flex justify-center pt-2">
-        <a href="https://www.instagram.com/" target="_blank" class="inline-flex items-center gap-2 bg-white text-black hover:bg-black hover:text-white font-extrabold uppercase text-xs px-6 py-3 rounded-full transition-all duration-200 shadow-md">
-          <i class="fa-brands fa-instagram text-base"></i> Seguici su Instagram!
-        </a>
-      </div>
+     
 
       <div class="text-xs text-white/90 font-semibold flex flex-col sm:flex-row items-center justify-center gap-y-2 gap-x-6 pt-1">
         <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-black text-[10px]"></i> Via Roma 92, Bassano del Grappa</span>
