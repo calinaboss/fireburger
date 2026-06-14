@@ -35,32 +35,42 @@
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
     .bg-grid-lines {
-  background:
-    radial-gradient(circle at top,
-      rgba(255,20,20,0.95) 0%,
-      rgba(255,20,20,0.95) 35%,
-      rgba(255,0,0,0.92) 60%,
-      rgba(220,0,0,1) 100%
-    ),
-
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,0.03) 8px,
-      transparent 8px
-    ),
-
-    linear-gradient(
-      rgba(255,255,255,0.03) 8px,
-      transparent 8px
-    );
-
-  background-size:
-    100% 100%,
-    100px 100px,
-    100px 100px;
-
-  background-color: #ff1a1a;
-}
+      background:
+        radial-gradient(circle at top,
+          rgba(255,20,20,0.95) 0%,
+          rgba(255,20,20,0.95) 35%,
+          rgba(255,0,0,0.92) 60%,
+          rgba(220,0,0,1) 100%
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.03) 8px,
+          transparent 8px
+        ),
+        linear-gradient(
+          rgba(255,255,255,0.03) 8px,
+          transparent 8px
+        );
+      background-size:
+        100% 100%,
+        100px 100px,
+        100px 100px;
+      background-color: #ff1a1a;
+    }
+    
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('sfondoscrittefire.png');
+      background-repeat: repeat;
+      opacity: 0.9;
+      z-index: 0;
+      pointer-events: none;
+    }
 
     @media (min-width: 1024px) {
       .bg-grid-lines {
@@ -68,7 +78,6 @@
       }
     }
 
-    /* Badge prezzo animato per gli shake */
     .price-badge {
       background: linear-gradient(135deg, #000 0%, #222 100%);
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
@@ -112,7 +121,7 @@
     </div>
   </header>
 
-  <section id="burgers" class="pt-20 pb-12 overflow-hidden">
+  <section id="burgers" class="pt-20 pb-12 overflow-hidden relative z-10">
     <div class="max-w-3xl mx-auto px-6 mb-12 flex items-center justify-between">
       <div>
         <span class="text-black font-extrabold uppercase text-xs block mb-1"></span>
@@ -264,7 +273,7 @@
     </div>
   </section>
 
-  <section id="tacos" class="pt-12 pb-12 border-t border-white/10 overflow-hidden">
+  <section id="tacos" class="pt-12 pb-12 border-t border-white/10 overflow-hidden relative z-10">
     <div class="max-w-3xl mx-auto px-6 mb-12 flex items-center justify-between">
       <div>
         <span class="text-black font-extrabold uppercase text-xs block mb-1"></span>
@@ -412,6 +421,9 @@
         <div class="min-w-full sm:min-w-[50%] md:min-w-[33.333%] snap-center flex flex-col items-center justify-start text-center px-4 group">
           <div class="relative w-full h-56 sm:h-64 flex items-center justify-center mb-8 overflow-visible">
             <div class="absolute inset-0 bg-white/5 rounded-full blur-2xl group-hover:bg-white/10 transition-colors z-0"></div>
+             <div class="absolute top-0 right-4 sm:right-12 z-20 bg-yellow-400 text-black text-xs sm:text-sm font-extrabold px-4 py-2 rounded-3xl rounded-bl-none shadow-xl transform rotate-6 border-2 border-black flex items-center gap-1">
+              <i class="fa-solid fa-star text-red-600"></i> TOP SELLER
+            </div>
             <img src="lotus.png" alt="Lotus Shake" class="max-h-full w-auto drop-shadow-[0_20px_25px_rgba(0,0,0,0.6)] hover:scale-110 transition-transform duration-500 relative z-10 cursor-grab active:cursor-grabbing">
           </div>
           <h3 class="font-title font-bold text-2xl uppercase mb-2 text-black bg-white px-4 py-1 rounded-sm transform -skew-x-6">Lotus Shake</h3>
@@ -511,7 +523,7 @@
     </div>
   </section>
 
-  <footer class="border-t border-white/10 py-12 text-center bg-black/20 backdrop-blur-sm">
+  <footer class="border-t border-white/10 py-12 text-center bg-black/20 backdrop-blur-sm relative z-10">
     <div class="max-w-4xl mx-auto px-6 space-y-8">
       
       <img src="logo.png" alt="Fire Logo" class="h-9 w-auto mx-auto opacity-90">
@@ -541,7 +553,6 @@
   </footer>
 
   <script>
-    // Funzione per scorrimento sliders
     function scrollSlider(dir, sliderId) {
       const slider = document.getElementById(sliderId);
       let scrollAmount = slider.clientWidth;
@@ -554,7 +565,6 @@
       slider.scrollBy({ left: dir * scrollAmount, behavior: 'smooth' });
     }
 
-    // Gestione Menu Mobile ad Hamburger
     const menuBtn = document.getElementById('menu-btn');
     const sideMenu = document.getElementById('side-menu');
     const icon = menuBtn.querySelector('i');

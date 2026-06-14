@@ -118,6 +118,31 @@
       background-color: #ff1a1a;
     }
 
+    body {
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 90vh;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url('sfondoscrittefire.png');
+      background-repeat: repeat;
+      opacity: 0.79;
+      -webkit-mask-image: linear-gradient(to bottom, transparent, black 15vh);
+      mask-image: linear-gradient(to bottom, transparent, black 15vh);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    section, header {
+      position: relative;
+      z-index: 10;
+    }
+
     @media (min-width: 1024px) {
       .bg-grid-lines {
         background-attachment: fixed;
@@ -169,7 +194,7 @@
   <header class="relative min-h-[90vh] flex flex-col items-center justify-center pt-12 pb-20 overflow-hidden">
     
     <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 bg-[url('sfondo.png')] bg-cover bg-center bg-no-repeat"></div>
+      <div class="absolute inset-0 bg-[url('sfondo.webp')] bg-cover bg-center bg-no-repeat"></div>
       <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-red-900/40 to-[#ff1a1a]"></div>
     </div>
 
@@ -199,9 +224,7 @@
     </div>
   </header>
 
-
-
-<section id="chi-siamo" class="py-16 relative z-10 border-t border-white/10 backdrop-blur-[1px]">
+<section id="chi-siamo" class="py-16 relative z-10">
   <div class="max-w-3xl mx-auto px-6 text-center">
     
     <h2 class="font-title text-4xl sm:text-5xl font-extrabold text-white uppercase mb-8 drop-shadow-sm">
@@ -212,14 +235,15 @@
       
       <p>FIRE nasce dall’idea di portare qualcosa di nuovo a Bassano del Grappa. Siamo stati i primi a introdurre lo <strong class="text-black font-extrabold uppercase">SMASH BURGER</strong> in città e, successivamente, anche i <strong class="text-black font-extrabold uppercase">FRENCH TACOS</strong>: due prodotti diventati il cuore della nostra identity.</p>
       
-      <p>Ma non ci siamo limitati a seguirne la tradizione. Li abbiamo reinterpretati a modo nostro, creando un gusto unico, riconoscibile e impossibile da trovare altrove. Ogni ricetta è pensata per unire qualità, carattere e un’esperienza diversa dal solito, con ingredienti freschi e preparazioni fatte al momento.</p>
+      <p>Ma non ci siamo limitati a seguirne la tradition. Li abbiamo reinterpretati a modo nostro, creando un gusto unico, riconoscibile e impossibile da trovare altrove. Ogni ricetta è pensata per unire qualità, carattere e un’esperienza diversa dal solito, con ingredienti freschi e preparazioni fatte al momento.</p>
       
       <p>Fire è un concept giovane, moderno e inclusivo con un menu <strong class="text-black font-extrabold uppercase">100% HALAL</strong> dove street food e attenzione ai dettagli si incontrano in un ambiente accogliente e contemporaneo. Un posto creato per chi cerca sapori autentici, ma con una personalità tutta nuova.</p>
       
     </div>
   </div>
 </section>
-<section class="py-16 border-t border-white/10">
+
+<section class="py-16 relative z-10">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-16">
       <h2 class="font-title text-3xl sm:text-5xl font-bold text-white mb-2">DOVE TROVARCI</h2>
@@ -239,7 +263,7 @@
         </p>
         
         <div class="mt-auto map-card">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.304450678523!2d11.733223312087429!3d45.76508847095984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4778db06d8c1243d%3A0x475b1f8723c9453!2sFire%20-%20Burgers%20%26%20Shakes!5e0!3m2!1sit!2sit!4v1779725631260!5m2!1sit!2sit" class="map-frame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.304450678523!2d11.733223312087429!3d45.76508847095984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4778db06d8c1243d%3A0x475b1f8723c9453!2sFire%20-%20Burgers%20%26%20Shakes!5e0!3m2!1sit!2sit!4v1779725631260!5m2!1sit!2sit" class="map-frame" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
@@ -255,7 +279,7 @@
         <span class="text-xs text-white/80 block mb-5">(A due passi dal ponte vecchio)</span>
         
         <div class="mt-auto map-card">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.1739680915834!2d11.72995821208755!3d45.767703670959946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4778db6e65d4bb7d%3A0xcc5f94334f0befcc!2sFIRE%20-%20French%20Tacos%20%26%20Shakes!5e0!3m2!1sit!2sit!4v1779725658322!5m2!1sit!2sit" class="map-frame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.1739680915834!2d11.72995821208755!3d45.767703670959946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4778db6e65d4bb7d%3A0xcc5f94334f0befcc!2sFIRE%20-%20French%20Tacos%20%26%20Shakes!5e0!3m2!1sit!2sit!4v1779725658322!5m2!1sit!2sit" class="map-frame" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
@@ -263,8 +287,7 @@
   </div>
 </section>
 
-
-  <section id="ordina" class="py-24 border-t border-white/10">
+  <section id="ordina" class="py-24 relative z-10">
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="font-title text-3xl sm:text-5xl font-bold text-white mb-2">CONSEGNA A DOMICILIO</h2>
@@ -297,9 +320,7 @@
     </div>
   </section>
 
- 
-
-  <section id="contatti" class="py-8 border-t border-white/10 text-center">
+  <section id="contatti" class="py-8 text-center relative z-10">
     <div class="max-w-4xl mx-auto px-6 space-y-8">
       
       <div class="pt-4 flex flex-col items-center">
@@ -346,7 +367,7 @@
         </a>
       </div>
 
-      <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-black font-extrabold gap-3">
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-black font-extrabold gap-3">
         <img src="logo.png" alt="Fire Logo" class="h-9 w-auto mx-auto opacity-90 mt-8">
         <p>© 2026 FIRE Burgers & Shakes SRL </p>
       </div>
