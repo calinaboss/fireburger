@@ -1,14 +1,92 @@
 <!DOCTYPE html>
 <html lang="it" class="scroll-smooth">
 <head>
+ <!-- id=G-159VZ8975H -->
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-159VZ8975H"></script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" id="silktide-consent-manager-css" href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.0/silktide-consent-manager.css" integrity="sha384-IO1E/jCrQXyH5rwcI0SXP7OXw47JFqQNDQcKhbFvqnL2IunBxxwE2Ne5XyAmCqKs" crossorigin="anonymous">
+<style id="silktide-consent-manager-overrides">
+#stcm-wrapper {
+  --boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;
+  --fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;
+  --primaryColor: #ffffff;
+  --backgroundColor: #ff0000;
+  --textColor: #FFFFFF;
+  --backdropBackgroundColor: #00000033;
+  --backdropBackgroundBlur: 4px;
+  --iconColor: #FF0000;
+  --iconBackgroundColor: #FFFFFF;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.0/silktide-consent-manager.js" integrity="sha384-j4NIMOecmtzMWe9GJADIIe5hTlHG63aiTQ/2XorW10RNyQJg+IU+xwFVDy45wBah" crossorigin="anonymous"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.silktideConsentManager.init({
+  backdrop: {
+    show: true
+  },
+  icon: {
+    position: "bottomLeft"
+  },
+  prompt: {
+    position: "center"
+  },
+  consentTypes: [
+    {
+      id: "essenziali",
+      label: "Essenziali",
+      description: "<p>Questi cookie sono necessari per il corretto funzionamento del sito web e non possono essere disattivati. Sono utili per funzionalità come l'accesso (login) e l'impostazione delle tue preferenze sulla privacy.</p>",
+      required: false,
+      onAccept: function() {
+        console.log('Add accept logic for Essenziali consent type here');
+      },
+      onReject: function() {
+        console.log('Add reject logic for Essenziali consent type here');
+      }
+    },
+    {
+  id: "analytics",
+  label: "Analytics",
+  description: "<p>Questi cookie ci aiutano a migliorare il sito.</p>",
+  required: false,
 
-  gtag('config', 'G-159VZ8975H');
+  onAccept: function () {
+
+  const script = document.createElement("script");
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-159VZ8975H";
+  script.async = true;
+  document.head.appendChild(script);
+
+  script.onload = function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+
+    gtag('js', new Date());
+    gtag('config', 'G-159VZ8975H');
+  };
+}
+}
+  ],
+  text: {
+    prompt: {
+      description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic.</p>",
+      acceptAllButtonText: "Accept all",
+      acceptAllButtonAccessibleLabel: "Accept all cookies",
+      rejectNonEssentialButtonText: "Reject non-essential",
+      rejectNonEssentialButtonAccessibleLabel: "Reject all non-essential cookies",
+      preferencesButtonText: "Preferences",
+      preferencesButtonAccessibleLabel: "Toggle preferences"
+    },
+    preferences: {
+      title: "Customize your cookie preferences",
+      description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
+      saveButtonText: "Save and close",
+      saveButtonAccessibleLabel: "Save your cookie preferences",
+      creditLinkText: "Get this banner for free",
+      creditLinkAccessibleLabel: "Get this banner for free"
+    }
+  }
+});
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
